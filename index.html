@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Chord Generator</title>
+        <link rel="stylesheet" href="css/fretboard.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    
+    <body>
+        <div class="header">
+            <ul class="header-ul">
+                <div class="title">ChordRite</div>
+                <!-- Dev Ed (2018)
+                https://www.youtube.com/watch?v=gXkqy0b4M5g&ab_channel=DevEd
+                Responsive navigation bar  -->
+                <div class="nav-links">
+                    <li class="header-li"><a href="index.html" class="active">Chord Generator</a></li>
+                    <li class="header-li"><a href="interval.html">Interval Generator</a></li>
+                    <li class="header-li"><a href="theory.html">Basic Guitar Theory</a></li>
+                </div>
+                <div class="nav-icon">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </ul>
+        </div>
+
+        <div class="info-container">
+            <!-- <h2>Construction</h2> -->
+            <div class="info">
+                <div class="chord-name" chord-name="C maj"></div>
+                <div class="chord-notes" chord-notes="C,G,E"></div>
+            </div>
+
+
+            <div class="info-buttons">
+                <!-- <h2>Settings</h2> -->
+                <button id="show-notes-btn" class="selected">Show Notes</button>
+                <button id="show-intervals-btn">Show Intervals</button>
+                <!-- <button id="play-chord-btn" class="settings-btn">Play chord</button> -->
+
+                <!-- <button id="previous-chord">Previous Chord</button>
+                <button id="next-chord">Next Chord</button> -->
+            </div>
+            
+            
+        </div>
+
+        <div class="fretboard"></div>
+
+        <div class="button-container">
+
+            <div class="divide-container">
+                <div class="button-group-one">
+                    <div class="root-container">
+                        <div class="button-name">Root</div>
+                        <div class="root">
+                            <button class="selected" root-on="6">6th</button>
+                            <button root-on="5">5th</button>
+                            <button root-on="4">4th</button>
+                        </div>
+                    </div>    
+                    
+                    <div class="key-container">
+                        <div class="button-name">Key</div>
+                        <div class="key-notes">
+                            <button class="selected" note="C">C</button>
+                            <button note="Db">Db</button>
+                            <button note="D">D</button>
+                            <button note="Eb">Eb</button>
+                            <button note="E">E</button>
+                            <button note="F">F</button>
+                            <button note="Gb">Gb</button>
+                            <button note="G">G</button>
+                            <button note="Ab">Ab</button>
+                            <button note="A">A</button>
+                            <button note="Bb">Bb</button>
+                            <button note="B">B</button>
+                        </div>
+                    </div>
+            
+                </div>
+                
+    
+                <div class="chord-type-container">
+                    <div class="button-name">Types</div>
+                    <div class="types">
+                        <button class="selected" type="maj">maj</button>
+                        <!-- <button type="5">5</button> -->
+                        <!-- <button type="6">6</button> -->
+                        <button type="7">7</button>
+                        <button type="maj7">maj7</button>
+                        <!-- <button type="9">9</button> -->
+                        <!-- <button type="maj9">maj9</button> -->
+                        <!-- <button type="11">11</button> -->
+                        <!-- <button type="13">13</button> -->
+                        <!-- <button type="maj13">maj13</button> -->
+                        <button type="min">min</button>
+                        <!-- <button type="m6">m6</button> -->
+                        <button type="m7">m7</button>
+                        <!-- <button type="m9">m9</button> -->
+                        <!-- <button type="m11">m11</button> -->
+                        <!-- <button type="m13">m13</button> -->
+                        <!-- <button type="m(Maj7)">m(Maj7)</button> -->
+                        <button type="sus2">sus2</button>
+                        <button type="sus4">sus4</button>
+                        <button type="dim">dim</button>
+                        <button type="aug">aug</button>
+                        <!-- <button type="6/9">6/9</button> -->
+                        <!-- <button type="7sus4">7sus4</button> -->
+                        <button type="m7b5">m7b5</button>
+                        <!-- <button type="7b9">7b9</button> -->
+                        <!-- <button type="9sus4">9sus4</button> -->
+                        <!-- <button type="add9">add9</button> -->
+                        <!-- <button type="aug9">aug9</button> -->
+                    </div>
+                </div>
+                
+            </div>
+           
+
+        </div>        
+        
+        <div class="footer">
+        </div>
+      
+
+
+
+        <script src="js/app.js"></script>
+        <script src="js/fretboard.js"></script>
+        <script src="js/navigationBar.js"></script>
+    </body>
+</html>

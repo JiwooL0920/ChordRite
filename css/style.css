@@ -1,0 +1,378 @@
+:root {
+    --sidebar-width: 200px;
+    --fretboard-width: 800px;
+}
+
+* {
+    margin: 0;
+    color: #cfcfc2;
+    font-family: "Lato", sans-serif;
+}
+
+
+/* basic setting  */
+body {
+    background-color: #272822;
+}
+
+/* header  */
+.header-ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #1b1b17;
+    border-bottom: 3px solid #3e3d32;
+}
+  
+.header-li {
+    float: right;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-left: 3px solid #3e3d32;
+}
+
+li a:hover {
+    background-color: rgb(8, 8, 8);
+}
+
+
+/* Dev Ed (2018)
+https://www.youtube.com/watch?v=gXkqy0b4M5g&ab_channel=DevEd
+[Responsive navigation bar] */
+.active {
+    background-color: rgb(8,8,8);
+    color: #e6db74;
+    /* color: #79153a; */
+}
+
+.nav-icon {
+    float: right;
+    margin-top: 10px;
+    margin-right: 30px;
+}
+
+
+@media screen and (max-width:800px) {
+    .nav-links {
+        position: absolute;
+        right: 0;
+        width: 150px;
+        height: 100%;
+        top: 48px;
+        background-color: #1b1b17;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 3;
+        border-left: 3px solid #3e3d32;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    li a {
+        border-left: none;
+        border-bottom: 3px solid #3e3d32;
+    }
+
+    .nav-icon div {
+        width: 30px;
+        height: 5px;
+        background-color: #cfcfc2;
+        margin: auto;
+        margin-bottom: 5px;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+.resize-animation-stopper * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 9px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -9px);
+}
+
+.title {
+    font-size: 25px;
+    padding: 8px 0px;
+    float: left;
+    display: block;
+    /* color: #66d9ef; */
+    text-align: center;
+    text-decoration: none;
+}
+
+/* ----------------------   1) chord generator page  -------------------------*/
+/* top of the fretboard  */
+.info-container {
+    width: var(--fretboard-width);
+    /* background: red; */
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.chord-name:before {
+    content: attr(chord-name);
+    font-size: 35px;
+    /* color: #e6db74; */
+    /* color: #f92672; */
+    text-decoration: underline;
+    text-decoration-color: #3e3d32;
+    text-decoration-thickness: 8px;
+    text-underline-offset: 4px;
+}
+
+.chord-notes {
+    margin: 20px 0px 0px 10px;
+}
+
+.chord-notes:before {
+    content: attr(chord-notes);
+    /* color:#e6db74; */
+}
+
+
+
+
+
+/* buttons  */
+button {
+    width: 90px;
+    height: 45px;
+    background-color: #3e3d32;
+    /* border-radius: 10%; */
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+button.selected {
+    background-color: #2b2a23;
+}
+
+.divide-container {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.button-container {
+    width: var(--fretboard-width);
+    margin: 0 auto;
+    margin-top: 40px;
+    /* border-radius: 2%; */
+    background-color: #1b1b17;
+    border: 3px solid #3e3d32;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    /* display: flex; */
+    /* flex-direction: row; */
+}
+
+
+.info-buttons {
+    margin-left: auto;
+    margin-top: auto;
+    /* margin-right: 30px; */
+}
+
+.button-group-one {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.root-container {
+    width: 800px;
+}
+
+.chord-type-container {
+    margin-left: 30px;
+}
+
+.button-name {
+    font-size: 20px;
+    margin: 20px 0px 10px 0px;
+}
+
+
+
+/* footer  */
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.footer{
+    margin-top: auto;
+    height: 40px;
+    background-color: #1b1b17;
+    border-top: 3px solid #3e3d32;
+}
+
+.submission {
+    text-align: right;
+    line-height: 40px;
+    margin-right: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------   2) interval generator page  -------------------------*/
+.interval-root-container {
+    margin-left: 40px;
+    width: 1200px;
+}
+
+.interval-button-container {
+    display: flex;
+    /* flex-direction: row; */
+    margin-left: 40px;
+}
+
+.interval-container {
+    margin-right: 40px;
+}
+
+.spacing {
+    width: 100%;
+    height: 118.5px;
+}
+
+
+
+
+
+
+/* ----------------------   3) basic guitar theory page  -------------------------*/
+.theory-content-container {
+    width: 800px;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #1b1b17;
+    border: 3px solid #3e3d32;
+}
+
+.chord-diagram {
+    margin: 30px 0px;
+    width: 100%;
+    background: #cfcfc2;
+    text-align: center;
+}
+
+img {
+    transform: scale(0.9);
+    margin-right: 20px;
+}
+
+.scale-diagram {
+    transform: scale(0.5);
+}
+
+
+h1 {
+    color:  #cfcfc2;
+    text-decoration: underline;
+    text-decoration-color: #3e3d32;
+    text-decoration-thickness: 10px;
+    text-underline-offset: 5px;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 17px;
+    margin-bottom: 30px; 
+}
+
+.bullet-container {
+    margin: -20px 0px 30px 25px;
+}
+
+
+/* b {
+    color: #e6db74;
+}
+
+
+i {
+    color: #f92672;
+} */
+
+b, i {
+    color: #75715e; 
+}
+
+.section {
+    margin: 70px 60px;
+}
+
+
+.book-container {
+    display: flex;
+}
+
+.book-info {
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.chord-summary {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    /* margin-right: 50px; */
+    border: 3px solid #3e3d32;
+}
+
+tr:hover {
+    background-color: #272822;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 3px solid #3e3d32;
+  }
+
+.table-row-top-level {
+    background-color: #3e3d32;
+}
+
+.table-row-top-level:hover {
+    background-color: #3e3d32;
+}

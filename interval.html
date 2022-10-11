@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Interval Generator</title>
+        <link rel="stylesheet" href="css/fretboard.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    
+    <body>
+        <div class="header">
+            <ul class="header-ul">
+                <div class="title">ChordRite</div>
+                 <!-- Dev Ed (2018)
+                https://www.youtube.com/watch?v=gXkqy0b4M5g&ab_channel=DevEd
+                Responsive navigation bar  -->
+                <div class="nav-links">
+                    <li class="header-li"><a href="index.html">Chord Generator</a></li>
+                    <li class="header-li"><a href="interval.html" class="active">Interval Generator</a></li>
+                    <li class="header-li"><a href="theory.html"">Basic Guitar Theory</a></li>
+                </div>
+                <div class="nav-icon">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </ul>
+        </div>
+
+        <div class="spacing"></div>
+
+        <div class="fretboard"></div>
+        
+        <div class="button-container">
+            <div class="interval-button-container">
+                <div class="interval-root-container">
+                    <div class="button-name">Root</div>
+                    <div class="root-notes">
+                        <button note="C">C</button>
+                        <button note="Db">Db</button>
+                        <button note="D">D</button>
+                        <button note="Eb">Eb</button>
+                        <button note="E">E</button>
+                        <button note="F">F</button>
+                        <button note="Gb">Gb</button>
+                        <button note="G">G</button>
+                        <button note="Ab">Ab</button>
+                        <button note="A">A</button>
+                        <button note="Bb">Bb</button>
+                        <button note="B">B</button>
+                    </div>
+                </div>
+        
+                <div class="interval-container">
+                    <div class="button-name">Intervals</div>
+                    <div class="interval-buttons">
+                        <button interval="Minor 2nd">Minor 2nd</button>
+                        <button interval="Major 2nd">Major 2nd</button>
+                        <button interval="Minor 3rd">Minor 3rd</button>
+                        <button interval="Major 3rd">Major 3rd</button>
+                        <button interval="Perfect 4th">Perfect 4th</button>
+                        <button interval="Perfect 5th">Perfect 5th</button>
+                        <button interval="Dim 5th">Dim 5th</button>
+                        <button interval="Minor 6th">Minor 6th</button>
+                        <button interval="Major 6th">Major 6th</button>
+                        <button interval="Minor 7th">Minor 7th</button>
+                        <button interval="Major 7th">Major 7th</button>
+                        <button interval="Octaves">Octaves</button>
+                        <!-- <button id="interval-minor-ninth">Minor 9th</button>
+                        <button id="interval-ninth">9th</button>
+                        <button id="interval-augmented-ninth">Aug 9th</button>
+                        <button id="interval-eleventh">11th</button>
+                        <button id="interval-augmented-eleventh">Aug 11th</button>
+                        <button id="interval-minor-thirteenth">Minor 13th</button>
+                        <button id="interval-thirteenth">13th</button> -->
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+        </div>
+
+
+        <script src="js/app.js"></script>
+        <script src="js/fretboard.js"></script>
+        <script src="js/intervalGenerator.js"></script>
+        <script src="js/navigationBar.js"></script>
+    </body>
+</html>
