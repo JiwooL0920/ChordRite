@@ -7,3 +7,4 @@ This project is an interactive web application for generating guitar chords and 
 # Demo
 ![chord](/demo/chord.png)
 ![interval](/demo/interval.png)
+![interval](/demo/theory.png)
